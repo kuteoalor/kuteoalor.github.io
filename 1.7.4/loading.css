@@ -1,0 +1,51 @@
+@keyframes ring {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(180deg)}
+  100% {transform: rotate(360deg)}
+}
+
+@keyframes rotation {
+  0% {transform: rotateY(0deg) translateX(0px)}
+  50% {transform: rotateY(180deg) scaleX(-1)}
+  100% {transform: rotateY(360deg) translateX(0px)}
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-origin: 0 0;
+}
+
+.ring .loader {
+  position: absolute;
+  animation: ring 2s linear infinite;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #f05616;
+}
+
+.logo {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  animation: rotation 4s infinite;
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+  transform-origin: 80px 82px;
+}
